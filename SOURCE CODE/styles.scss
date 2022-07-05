@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1000px;
+  min-width: 320px;
+  margin: 1rem auto;
+  font-size: 1rem;
+  line-height: 1.3;
+  background-color: #fff;
+  padding: 10px 15px;
+}
+
+.btn {
+  display: flex;
+  background: #061f70;
+  color: #fff;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+
+.btn.btn-danger{
+  background: #de3b3b;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+.btn:disabled {
+  background: #ccc;
+  color: #000;
+  cursor: not-allowed;
+  // opacity: 1;
+}

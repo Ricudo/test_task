@@ -1,0 +1,36 @@
+.card {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background: aquamarine;
+  height: 70vh;
+
+  .card-component {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: deepskyblue;
+    max-width: 1000px;
+    min-width: 600px;
+    max-height: 35vh;
+
+    h2{
+      font-size: 6rem;
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: 4rem;
+      line-height: 1.5;
+    }
+
+    .red {
+      color:red
+    }
+  }
+}
+
+
