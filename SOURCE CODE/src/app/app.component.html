@@ -1,0 +1,65 @@
+<header>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dicta eaque eligendi et neque non officia quas
+    similique suscipit, ullam! Consequuntur dolor fugiat fugit illo iste laudantium molestiae mollitia nam, officia
+    perferendis praesentium provident, quaerat rem suscipit tenetur unde, voluptatibus?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus fuga id ipsum molestias officiis similique
+    velit! Amet doloremque facere, impedit in maiores quasi quibusdam ratione reprehenderit sint tempora, voluptas
+    voluptatem?
+  </p>
+</header>
+
+<main>
+  <div class="placeholder">
+    <div
+      *ngIf="usersService.users[0].hasOwnProperty('name') &&
+      !usersService.loadingFlag;
+      else placeholderElseBlock"
+    >
+
+      <app-diagram></app-diagram>
+      <app-table></app-table>
+
+    </div>
+
+    <ng-template #placeholderElseBlock>
+
+      <app-empty-placeholder
+        *ngIf="!usersService.loadingFlag;
+        else loadingBlock"
+      ></app-empty-placeholder>
+
+      <ng-template #loadingBlock>
+        <div *ngIf="usersService.loadingFlag" class="placeholder">
+          <img [@rotatedState]="state" src="./assets/RotateMe.png">
+        </div>
+      </ng-template>
+
+    </ng-template>
+
+  </div>
+
+  <button class="btn" (click)="getUsers()">Button</button>
+</main>
+
+<footer>
+  <div [ngClass]="{'refreshed-background': (this.refreshCounter % this.necessaryRefreshes) === 0}">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dicta eaque eligendi et neque non officia
+      quas similique suscipit, ullam! Consequuntur dolor fugiat fugit illo iste laudantium molestiae mollitia nam,
+      officia perferendis praesentium provident, quaerat rem suscipit tenetur unde, voluptatibus?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dicta eaque eligendi et neque non officia
+      quas similique suscipit, ullam! Consequuntur dolor fugiat fugit illo iste laudantium molestiae mollitia nam,
+      officia perferendis praesentium provident, quaerat rem suscipit tenetur unde, voluptatibus?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dicta eaque eligendi et neque non officia
+      quas similique suscipit, ullam! Consequuntur dolor fugiat fugit illo iste laudantium molestiae mollitia nam,
+      officia perferendis praesentium provident, quaerat rem suscipit tenetur unde, voluptatibus?
+    </p>
+  </div>
+</footer>

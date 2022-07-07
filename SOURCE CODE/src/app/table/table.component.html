@@ -1,0 +1,23 @@
+<div class="table-div">
+  <table>
+    <tbody>
+    <tr class="t-head">
+      <th *ngFor="let key of tableKeys">{{key | titlecase}}</th>
+    </tr>
+    <tr *ngFor="let user of tableUsers">
+      <td>{{user.gender | titlecase}}</td>
+      <td>{{(user.name.title + '. ' + user.name.first + ' ' + user.name.last) | titlecase}}</td>
+      <td>{{(user.location.city + ', ' + user.location.state) | titlecase}}</td>
+      <td><a href="mailto:{{user.email}}">{{user.email}}</a></td>
+      <td>User Name: {{user.login.username}}</td>
+      <td>Age: {{user.dob.age}}</td>
+      <td>At age: {{user.registered.age}}</td>
+      <td><a href="tel:{{user.phone}}">{{user.phone}}</a></td>
+      <td><a href="tel:{{user.cell}}">{{user.cell}}</a></td>
+      <td>{{user.id.name + ' ' + user.id.value}}</td>
+      <td><img [src]="user.picture.thumbnail"></td>
+      <td>{{user.nat}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

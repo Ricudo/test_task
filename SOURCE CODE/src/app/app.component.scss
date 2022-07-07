@@ -1,0 +1,24 @@
+p {
+  text-align: justify;
+}
+
+
+.placeholder {
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70vh;
+  margin: 1rem 0;
+  padding: 1rem 0;
+
+  img {
+    margin: auto;
+    height: 35vh;
+  }
+}
+
+.refreshed-background {
+  background: red;
+  padding: 1rem;
+}
